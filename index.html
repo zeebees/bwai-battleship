@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battleship</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>🚢 Battleship</h1>
+
+  <section id="lobby" class="panel">
+    <button id="create">Start a new game</button>
+    <div class="or">or join one</div>
+    <form id="join-form">
+      <input id="code" placeholder="CODE" maxlength="4" autocomplete="off">
+      <button>Join</button>
+    </form>
+  </section>
+
+  <section id="game" hidden>
+    <p id="status">…</p>
+    <p class="meta">Game <b id="game-code"></b> · you are player <b id="seat"></b> · players in: <b id="players"></b></p>
+
+    <div id="place-controls" hidden>
+      <button id="shuffle">🎲 Shuffle my fleet</button>
+      <button id="ready">✅ Ready</button>
+    </div>
+
+    <div class="boards">
+      <div>
+        <h2>Your fleet</h2>
+        <div id="mine" class="board"></div>
+      </div>
+      <div>
+        <h2>Enemy waters</h2>
+        <div id="theirs" class="board"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

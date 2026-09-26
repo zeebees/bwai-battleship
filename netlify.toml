@@ -1,0 +1,7 @@
+# Plain HTML/CSS/JS front end + Netlify Functions back end. No build step.
+[build]
+  publish = "."
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
